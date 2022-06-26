@@ -5,7 +5,6 @@ export enum Directions {
   "WEST",
 }
 
-export interface Position {
-  x: number;
-  y: number;
-}
+export const isOnTable = (pos: number): boolean => {
+  return pos >= 0 && pos <= 4;
+};

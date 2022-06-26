@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import * as process from "process";
 import { createInterface, ReadLineOptions } from "readline";
-import Robot from "./robot";
-const robotController = new Robot();
+import Movement from "./movement";
+const robotController = new Movement();
 
 const rlOptions: ReadLineOptions = {
   input: process.stdin,
