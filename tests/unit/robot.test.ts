@@ -8,7 +8,7 @@ describe("Robot unit tests", () => {
   };
   it("should be initialized with the given params", () => {
     const robot: Robot = new Robot(options);
-    expect(robot.toString()).toBe("0, 0, NORTH");
+    expect(robot.toString()).toBe("Output: 0, 0, NORTH");
   });
 
   it("should turn the robot left", () => {
@@ -47,14 +47,14 @@ describe("Robot unit tests", () => {
     const robot: Robot = new Robot(options);
 
     robot.move();
-    expect(robot.toString()).toBe("0, 1, NORTH");
+    expect(robot.toString()).toBe("Output: 0, 1, NORTH");
   });
 
   it("should not move forward when at the edge of table top", () => {
     const robot: Robot = new Robot({ ...options, position: { x: 0, y: 4 } });
 
-    expect(robot.toString()).toBe("0, 4, NORTH");
+    expect(robot.toString()).toBe("Output: 0, 4, NORTH");
     robot.move();
-    expect(robot.toString()).toBe("0, 4, NORTH");
+    expect(robot.toString()).toBe("Output: 0, 4, NORTH");
   });
 });

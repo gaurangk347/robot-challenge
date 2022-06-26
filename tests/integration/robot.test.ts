@@ -15,16 +15,16 @@ describe("Robot integration tests", () => {
     robot.turnRight();
     robot.move();
     robot.move();
-    expect(robot.toString()).toBe("2, 2, EAST");
+    expect(robot.toString()).toBe("Output: 2, 2, EAST");
   });
 
   it("should ignore movements outside the edge", () => {
     const robot: Robot = new Robot(options);
-    expect(robot.toString()).toBe("0, 0, NORTH");
+    expect(robot.toString()).toBe("Output: 0, 0, NORTH");
     robot.move();
     robot.turnLeft();
     robot.move();
-    expect(robot.toString()).toBe("0, 1, WEST");
+    expect(robot.toString()).toBe("Output: 0, 1, WEST");
   });
 
   it("should change direction even when cannot move around on corner", () => {
@@ -32,14 +32,14 @@ describe("Robot integration tests", () => {
       position: { x: 4, y: 4 },
       direction: Directions.EAST,
     });
-    expect(robot.toString()).toBe("4, 4, EAST");
+    expect(robot.toString()).toBe("Output: 4, 4, EAST");
 
     robot.move();
     robot.turnLeft();
-    expect(robot.toString()).toBe("4, 4, NORTH");
+    expect(robot.toString()).toBe("Output: 4, 4, NORTH");
 
     robot.move();
     robot.turnLeft();
-    expect(robot.toString()).toBe("4, 4, WEST");
+    expect(robot.toString()).toBe("Output: 4, 4, WEST");
   });
 });

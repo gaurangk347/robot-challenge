@@ -1,12 +1,12 @@
 # Robot Challenge
 
-## Installing required for the project
+## Installation required for the project
 
 Node.js: https://nodejs.org/en/download/
 
 ## How to run?
 
-We can use either npm or yarn to run the project.
+Use either npm or yarn to run the project.
 
 - npm is installed with Node by default
 - yarn: https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable
@@ -16,11 +16,7 @@ Once the setup is done, run
 ```shell
 $ yarn
 $ yarn start
-```
-
-### OR
-
-```shell
+or
 $ npm
 $ npm start
 ```
@@ -30,21 +26,21 @@ $ npm start
 This solution uses `Jest` as the testing libray.
 
 ```shell
-$ npm test
+$ yarn test
 or
-$yarn test
+$ npm test
 ```
 
 ## Test data
 
 ```plain
-  PLACE 1,2,EAST
-  MOVE
-  MOVE
-  LEFT
-  MOVE
-  REPORT
-  Output: 3,3,NORTH
+PLACE 1,2,EAST
+MOVE
+MOVE
+LEFT
+MOVE
+REPORT
+Output: 3,3,NORTH
 ```
 
 ```plain
