@@ -20,7 +20,6 @@ export default class Movement {
         case "REPORT":
           process.stdout.write(this.robot.toString() + "\n");
           break;
-        default:
       }
     }
 
@@ -33,21 +32,19 @@ export default class Movement {
         initialPlace = initialPlaceStr.split(",");
       }
       let [xVal = "0", yVal = "0", dir = "NORTH"] = initialPlace;
-      if (!isOnTable(parseInt(xVal))) {
-        xVal = "0";
+      // To check if robot is placed on table without falling or not
+      if (
+        isOnTable(parseInt(xVal)) &&
+        !isOnTable(parseInt(yVal)) &&
+        Object.keys(Directions).includes(dir)
+      ) {
+        const position = { x: parseInt(xVal), y: parseInt(yVal) };
+        const direction = Directions[dir as keyof typeof Directions];
+        this.robot = new Robot({
+          position,
+          direction,
+        });
       }
-      if (!isOnTable(parseInt(yVal))) {
-        yVal = "0";
-      }
-      if (!Object.keys(Directions).includes(dir)) {
-        dir = "NORTH";
-      }
-      const position = { x: parseInt(xVal), y: parseInt(yVal) };
-      const direction = Directions[dir as keyof typeof Directions];
-      this.robot = new Robot({
-        position,
-        direction,
-      });
     }
   }
 }
