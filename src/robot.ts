@@ -49,7 +49,7 @@ export default class Robot {
   }
 
   public toString() {
-    return `${this.position.x}, ${this.position.y}, ${
+    return `Output: ${this.position.x}, ${this.position.y}, ${
       Directions[this.direction]
     }`;
   }

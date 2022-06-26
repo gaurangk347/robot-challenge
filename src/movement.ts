@@ -35,7 +35,7 @@ export default class Movement {
       // To check if robot is placed on table without falling or not
       if (
         isOnTable(parseInt(xVal)) &&
-        !isOnTable(parseInt(yVal)) &&
+        isOnTable(parseInt(yVal)) &&
         Object.keys(Directions).includes(dir)
       ) {
         const position = { x: parseInt(xVal), y: parseInt(yVal) };

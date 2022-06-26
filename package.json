@@ -1,17 +1,14 @@
 {
   "name": "robot-challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "Robot challenge using TypeScript.",
   "author": "Gaurang Kathiriya",
   "license": "ISC",
   "scripts": {
     "build": "echo Using TypeScript && tsc --version && tsc --pretty",
-    "start": "yarn build && node ./lib/index",
-    "test": "yarn build && jest"
+    "start": "npm run build && node ./lib/index",
+    "test": "npm run build && jest"
   },
-  "files": [
-    "lib"
-  ],
   "main": "lib/index.js",
   "bin": {
     "toy-robot": "./lib/index.js"
