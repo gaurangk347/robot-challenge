@@ -1,19 +1,11 @@
-import { Directions, isOnTable } from "./constants";
-interface Position {
-  x: number;
-  y: number;
-}
-interface IRobotOptions {
-  position: Position;
-  direction: Directions;
-}
+import { Directions, RobotOptions, isOnTable, Position } from "./constants";
 
 export default class Robot {
   public direction: Directions;
-  private position: Position;
+  public position: Position;
 
-  constructor(options: IRobotOptions) {
-    this.position = options.position;
+  constructor(options: RobotOptions) {
+    this.position = { ...options.position };
     this.direction = options.direction;
   }
 
@@ -53,7 +45,6 @@ export default class Robot {
           --this.position.x;
         }
         break;
-      default:
     }
   }
 
