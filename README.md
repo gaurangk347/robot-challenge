@@ -21,6 +21,10 @@ $ npm
 $ npm start
 ```
 
+After running the command wait till you get below info text before giving any input,
+
+`Valid commands: PLACE, LEFT, RIGHT, MOVE, REPORT. Size of the table is 5x5. PLACE will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST. Example of PLACE: PLACE 0,0,NORTH`
+
 ## Testing
 
 This solution uses `Jest` as the testing libray.
